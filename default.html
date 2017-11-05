@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Funny Face 2015</title>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/text.css" />
+<link rel="stylesheet" href="css/960.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/party.css" />
+<script src="js/script.js"></script>
+</head>
+<body onkeydown="selectMove()">
+<div class="container_12">
+  <div class="grid_3">
+    <img src="images/LOGO_FunnyFace.png" alt="Funny Face 2015" class="logo"/>
+  </div>
+  <div class="grid_9 center">
+    <p class="instructions">Play with the available acessories in your face.</p>
+        <div id="menu_1" class="menuitem" title="Glasses"></div>
+        <div id="menu_2" class="menuitem" title="Beards"></div>
+        <div id="menu_3" class="menuitem" title="Hats"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div id="q1" style="display: none;" class="grid_12 submenu center">
+	<div id="glasses_1" onclick="element1Click('GLASSES_1.png')" class="glasses accessories"></div>
+    <div id="glasses_2" onclick="element1Click('GLASSES_2.png')"  class="glasses accessories"></div>
+    <div id="glasses_3" onclick="element1Click('GLASSES_3.png')"  class="glasses accessories"></div>
+  </div>
+
+  <div id="q2" style="display: none;" class="grid_12 submenu center">
+	<div id="beards_1" onclick="element2Click('BEARD_1.png')" class="beards accessories"></div>
+    <div id="beards_2" onclick="element2Click('BEARD_2.png')" class="beards accessories"></div>
+    <div id="beards_3" onclick="element2Click('BEARD_3.png')" class="beards accessories"></div>
+    <div id="beards_4" onclick="element2Click('BEARD_4.png')" class="beards accessories"></div>
+  </div>
+
+  <div id="q3" style="display: none;"  class="grid_12 submenu center">
+	<div id="hats_1" onclick="element3Click('HAT_1.png')" class="hats accessories"></div>
+    <div id="hats_2" onclick="element3Click('HAT_2.png')" class="hats accessories"></div>
+    <div id="hats_3" onclick="element3Click('HAT_3.png')" class="hats accessories"></div>
+    <div id="hats_4"  onclick="element3Click('HAT_4.png')" class="hats accessories"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="grid_4 prefix_4 suffix_4">
+    <p class="drop">
+      Поместите фотографию лица сюда <br/> 
+      <span class="attention">Можно загружать только JPG. Максимум 300 Кб.</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  
+
+  <div class="grid_2 prefix_3 suffix_2 center">Размер</div>
+  <div class="grid_2 suffix_3 center">Поворот</div>
+  <div class="clear"></div>
+
+  <div class="grid_1 prefix_3"><button id="plus" class="button" onclick="ChangeSize(0.1)">+</button></div>
+  <div class="grid_1 suffix_2"><button id="minus" class="button"  onclick="ChangeSize(-0.1)">-</button></div>
+  <div class="grid_1"><button id="left" class="button"  onclick="ChangeRotate(-1)">Лево</button></div>
+  <div class="grid_1 suffix_3"><button id="right" class="button" onclick="ChangeRotate(1)">Право</button></div>
+  <div class="clear"></div>
+  
+  <div class="grid_6 prefix_3 suffix_3">
+		<div style="overflow:hidden" id="picture" class="picture">
+        	<div id="imageFace" class="picture"></div>
+        </div>
+  </div>
+  <div class="clear"></div>
+  
+  <div class="grid_4 prefix_4 suffix_4 center">
+    <p><button id="save" class="button" onClick="javascript:savePicture();">Сохранить картинку</button></p>
+  </div>
+  <div class="clear"></div>
+  <div class="grid_12">
+    <p>
+      Funny Face - WorldSkills - 2016.
+    </p>
+  </div>
+  <div class="clear"></div>
+  <script>
+    if (confirm("Загрузить картинки?")){
+      document.getElementById("q1").style.display = "block";
+      document.getElementById("q2").style.display = "block";
+      document.getElementById("q3").style.display = "block";
+    }
+  </script>
+</body>
+</html>
